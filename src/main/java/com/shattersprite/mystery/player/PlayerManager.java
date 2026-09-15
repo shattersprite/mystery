@@ -110,13 +110,13 @@ public class PlayerManager {
      * Handle player join
      */
     public void handlePlayerJoin(Player player) {
-        loadProgress(player.getUuid());
+        loadProgress(player.getUniqueId());
     }
 
     /**
      * Handle player quit
      */
     public void handlePlayerQuit(Player player) {
-        saveProgress(player.getUuid()).thenRun(() -> removeProgress(player.getUuid()));
+        saveProgress(player.getUniqueId()).thenRun(() -> removeProgress(player.getUniqueId()));
     }
 }

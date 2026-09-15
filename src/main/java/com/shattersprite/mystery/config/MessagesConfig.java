@@ -156,10 +156,6 @@ public class MessagesConfig {
         return getPrefix() + getMessage("cannot-afford-hint", "&cYou cannot afford this hint.");
     }
 
-    public String getHintCost(int cost) {
-        return getPrefix() + getMessage("hint-cost", "cost", String.valueOf(cost));
-    }
-
     public String getHintCostMessage(int cost) {
         return getMessage("hint-cost", "cost", String.valueOf(cost));
     }

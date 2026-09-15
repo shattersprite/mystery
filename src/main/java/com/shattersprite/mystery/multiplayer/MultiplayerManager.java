@@ -4,6 +4,7 @@ import com.shattersprite.mystery.MysteryPlugin;
 import com.shattersprite.mystery.mystery.Mystery;
 import com.shattersprite.mystery.player.PlayerProgress;
 import org.bukkit.entity.Player;
+import net.kyori.adventure.text.Component;
 
 import java.util.*;
 
@@ -39,7 +40,8 @@ public class MultiplayerManager {
         serverWideMysteries.put(mysteryId, serverMystery);
 
         // Notify all online players
-        plugin.getServer().broadcast(plugin.getMessagesConfig().getMessage("mystery-started-server", "id", mysteryId));
+        plugin.getServer().broadcast(Component.text(
+            plugin.getMessagesConfig().getMessage("mystery-started-server", "id", mysteryId)));
 
         return true;
     }
@@ -61,7 +63,8 @@ public class MultiplayerManager {
             }
         }
 
-        plugin.getServer().broadcast(plugin.getMessagesConfig().getMessage("mystery-stopped-server", "id", mysteryId));
+        plugin.getServer().broadcast(Component.text(
+            plugin.getMessagesConfig().getMessage("mystery-stopped-server", "id", mysteryId)));
 
         return true;
     }
