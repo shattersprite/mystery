@@ -1,0 +1,69 @@
+name: Mystery
+version: '${project.version}'
+main: com.shattersprite.mystery.MysteryPlugin
+api-version: '1.21'
+author: Shattersprite
+description: Create interactive mysteries, clue hunts, and adventures on your Minecraft server
+website: https://github.com/shattersprite/Mystery
+
+softdepend:
+  - Vault
+  - PlaceholderAPI
+  - Citizens
+  - WorldGuard
+  - LuckPerms
+
+permissions:
+  mystery.*:
+    description: All Mystery permissions
+    children:
+      mystery.admin: true
+      mystery.play: true
+  mystery.admin:
+    description: Administrative permissions
+    children:
+      mystery.create: true
+      mystery.edit: true
+      mystery.delete: true
+      mystery.start: true
+      mystery.stop: true
+      mystery.reset: true
+      mystery.reload: true
+      mystery.test: true
+      mystery.bypass: true
+  mystery.create:
+    description: Create new mysteries
+    default: op
+  mystery.edit:
+    description: Edit existing mysteries
+    default: op
+  mystery.delete:
+    description: Delete mysteries
+    default: op
+  mystery.start:
+    description: Start mysteries
+    default: op
+  mystery.stop:
+    description: Stop mysteries
+    default: op
+  mystery.reset:
+    description: Reset player progress
+    default: op
+  mystery.reload:
+    description: Reload plugin configuration
+    default: op
+  mystery.test:
+    description: Test mysteries without affecting progress
+    default: op
+  mystery.bypass:
+    description: Bypass puzzle cooldowns and restrictions
+    default: op
+  mystery.play:
+    description: Play mysteries
+    default: true
+  mystery.hint:
+    description: Request hints
+    default: true
+  mystery.progress:
+    description: View own progress
+    default: true

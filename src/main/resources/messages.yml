@@ -1,0 +1,87 @@
+# Mystery Plugin Messages
+
+prefix: "&6[&eMystery&6] &r"
+
+# General messages
+no-permission: "&cYou don't have permission to do that."
+unknown-command: "&cUnknown command. Use /mystery help."
+player-only: "&cThis command can only be used by players."
+invalid-argument: "&cInvalid argument: {arg}"
+console-only: "&cThis command can only be used from the console."
+
+# Mystery messages
+mystery-not-found: "&cMystery '{id}' not found."
+mystery-started: "&aYou have started: &e{name}"
+mystery-completed: "&aYou have completed: &e{name}"
+mystery-stopped: "&cYou have stopped the mystery."
+already-in-mystery: "&cYou are already in a mystery."
+not-in-mystery: "&cYou are not currently in a mystery."
+mystery-already-started: "&cThis mystery is already started."
+mystery-not-started: "&cThis mystery is not started."
+
+# Stage messages
+stage-completed: "&aStage {stage} completed!"
+stage-failed: "&cStage {stage} failed."
+
+# Clue messages
+clue-received: "&e✦ CLUE DISCOVERED ✦\n&f{clue}"
+clue-book-title: "Mystery Clue"
+
+# Hint messages
+hint-received: "&e✦ HINT ✦\n&f{hint}"
+no-hints-available: "&cNo more hints available for this stage."
+hint-cost: "&eHint costs {cost} experience."
+cannot-afford-hint: "&cYou cannot afford this hint."
+hints-disabled: "&cHints are disabled on this server."
+
+# Progress messages
+not-in-mystery: "&cYou are not currently in a mystery."
+progress-header: "&6=== Your Progress ==="
+progress-mystery: "&eMystery: &f{name}"
+progress-stage: "&eCurrent Stage: &f{stage}"
+progress-completed: "&eCompleted Stages: &f{stages}"
+progress-status: "&eStatus: &f{status}"
+progress-reset: "&aYour progress has been reset."
+player-progress: "&6=== {player}'s Progress ==="
+
+# Admin messages
+mystery-created: "&aMystery '{id}' created successfully!"
+mystery-deleted: "&aMystery '{id}' deleted successfully!"
+mystery-reloaded: "&aMystery '{id}' reloaded successfully!"
+plugin-reloaded: "&aPlugin reloaded successfully."
+player-reset: "&a{player}'s progress has been reset."
+mystery-started-server: "&aMystery '{id}' started server-wide."
+mystery-stopped-server: "&cMystery '{id}' stopped."
+
+# Testing messages
+testing-mode-enabled: "&eTesting mode enabled. Progress will not be saved."
+testing-mode-disabled: "&eTesting mode disabled."
+testing-teleport: "&eTeleported to stage location."
+testing-skip: "&eSkipped to stage {stage}."
+testing-complete: "&eCompleted current stage."
+
+# Puzzle messages
+puzzle-incorrect: "&cIncorrect answer. Try again."
+puzzle-correct: "&aCorrect answer!"
+puzzle-timeout: "&cTime's up!"
+puzzle-attempts-remaining: "&eAttempts remaining: {attempts}"
+puzzle-no-attempts: "&cNo attempts remaining."
+
+# Reward messages
+reward-received: "&aReward received: {reward}"
+reward-command-error: "&cError executing reward command."
+
+# GUI messages
+gui-create-title: "CREATE MYSTERY"
+gui-edit-title: "EDIT MYSTERY"
+gui-list-title: "MYSTERIES"
+gui-editor-title: "MYSTERY EDITOR"
+gui-stage-title: "STAGE EDITOR"
+gui-rewards-title: "REWARDS"
+gui-hints-title: "HINTS"
+gui-puzzles-title: "PUZZLES"
+
+# Error messages
+error-loading-mystery: "&cError loading mystery '{id}'. Check console for details."
+error-saving-progress: "&cError saving progress. Contact an administrator."
+error-database: "&cDatabase error. Contact an administrator."

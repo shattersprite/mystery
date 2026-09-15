@@ -1,0 +1,55 @@
+# Mystery Plugin Configuration
+
+# Storage settings
+storage:
+  # Options: sqlite, mysql
+  type: sqlite
+
+  # MySQL configuration (only used if type is mysql)
+  mysql:
+    host: localhost
+    port: 3306
+    database: mystery
+    username: root
+    password: ""
+    pool-size: 10
+
+# Hint system settings
+hints:
+  enabled: true
+  # Options: experience, economy, points, none
+  cost-type: experience
+
+# Trigger settings
+triggers:
+  # How often to check location triggers (in ticks, 20 ticks = 1 second)
+  location-check-interval: 20
+  # Maximum distance for location triggers (in blocks)
+  location-distance: 3.0
+
+# Testing mode
+testing:
+  enabled: true
+
+# Debug mode (outputs additional information to console)
+debug: false
+
+# GUI settings
+gui:
+  # Title of the mystery creation GUI
+  create-title: "CREATE MYSTERY"
+  # Title of the mystery editor GUI
+  edit-title: "EDIT MYSTERY"
+  # Title of the mystery list GUI
+  list-title: "MYSTERIES"
+
+# Effects
+effects:
+  # Sound to play when a clue is discovered
+  clue-sound: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  # Sound to play when a stage is completed
+  stage-sound: "ENTITY_PLAYER_LEVELUP"
+  # Sound to play when a mystery is completed
+  complete-sound: "ENTITY_PLAYER_LEVELUP"
+  # Sound to play when a puzzle is solved
+  puzzle-sound: "ENTITY_PLAYER_LEVELUP"

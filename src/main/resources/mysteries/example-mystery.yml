@@ -1,0 +1,80 @@
+# Example Mystery - The Forgotten Founder
+# This is a template for creating mysteries
+
+mystery:
+  id: forgotten-founder
+  name: "&6The Forgotten Founder"
+  description: "&7Something has been hidden beneath the server..."
+
+  # Multiplayer mode: individual, first-completion, team, server-wide
+  mode: individual
+
+  # Stages are numbered sequentially
+  stages:
+    1:
+      type: clue
+      clue: "&eWhere the world first wakes, your journey begins."
+      clue-display:
+        type: chat
+        sound: ENTITY_EXPERIENCE_ORB_PICKUP
+      trigger:
+        type: location
+        world: world
+        x: 0
+        y: 64
+        z: 0
+        radius: 5
+
+    2:
+      type: clue
+      clue: "&2Among the trees, something watches from above."
+      clue-display:
+        type: chat
+        sound: ENTITY_EXPERIENCE_ORB_PICKUP
+      trigger:
+        type: location
+        world: world
+        x: 100
+        y: 70
+        z: 100
+        radius: 5
+
+    3:
+      type: puzzle
+      clue: "&aWhat year was this server founded?"
+      clue-display:
+        type: chat
+        sound: ENTITY_EXPERIENCE_ORB_PICKUP
+      puzzle:
+        type: code
+        answer: "2026"
+        attempts: 3
+        case-sensitive: false
+
+    4:
+      type: final
+      clue: "&eYou have discovered the truth!"
+      clue-display:
+        type: chat
+        sound: ENTITY_PLAYER_LEVELUP
+      rewards:
+        - type: item
+          material: DIAMOND
+          amount: 5
+        - type: experience
+          amount: 1000
+        - type: command
+          command: "title %player% title {\"text\":\"The Forgotten Founder\",\"color\":\"gold\"}"
+
+  # Hints configuration
+  hints:
+    enabled: true
+    1:
+      hint: "&7Look for the spawn point."
+      cost: 0
+    2:
+      hint: "&7Search near the forest."
+      cost: 100
+    3:
+      hint: "&7The answer is the current year."
+      cost: 250
